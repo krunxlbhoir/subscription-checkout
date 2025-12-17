@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Checkout</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="checkout-container">
+        
+        <section class="form-section">
+            <header class="form-header">
+                <h2>Secure Checkout</h2>
+                <p>Complete your subscription to unlock premium features.</p>
+            </header>
+
+            <form class="checkout-form">
+                <div class="section-title">
+                    <span class="step-number">1</span>
+                    <h3>Account Information</h3>
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@email.com" required />
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <span class="step-number">2</span>
+                    <h3>Payment Method</h3>
+                </div>
+
+                <div class="field">
+                    <label for="card">Card Number</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="card" placeholder="0000 0000 0000 0000" />
+                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" class="card-icon" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label>Expiry Date</label>
+                        <input type="text" placeholder="MM / YY" />
+                    </div>
+                    <div class="field">
+                        <label>CVV</label>
+                        <input type="password" placeholder="•••" />
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Confirm & Pay 
+                </button>
+                
+                <p class="secure-text">Your transaction is encrypted with 256-bit SSL security.</p>
+            </form>
+        </section>
+
+        <aside class="sidebar">
+            <div class="plan-section">
+                <h3>Select Your Plan</h3>
+                <div class="plans-list">
+                    <label class="plan-card">
+                        <input type="radio" name="plan" value="199" checked />
+                        <div class="plan-info">
+                            <span class="plan-name">Basic</span>
+                            <span class="plan-price">₹199<small>/mo</small></span>
+                        </div>
+                    </label>
+
+                    <label class="plan-card featured">
+                        <input type="radio" name="plan" value="499" />
+                        <div class="plan-info">
+                            <span class="plan-name">Pro</span>
+                            <span class="plan-price">₹499<small>/mo</small></span>
+                        </div>
+                        <span class="badge">Most Popular</span>
+                    </label>
+
+                    <label class="plan-card">
+                        <input type="radio" name="plan" value="999" />
+                        <div class="plan-info">
+                            <span class="plan-name">Premium</span>
+                            <span class="plan-price">₹999<small>/mo</small></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h4>Order Summary</h4>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹199.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (GST 18%)</span>
+                    <span>₹35.82</span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total-price">₹234.82</span>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>"The best investment I've made for my business this year!"</p>
+                <div class="user">- Sarah Jenkins, Designer</div>
+            </div>
+        </aside>
+
+    </main>
+
+</body>
+</html>
